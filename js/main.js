@@ -33,7 +33,7 @@ function close(){
 }
 
 function rsz(){
-    if (screen.width >= 1024) {
+    if (screen.width >= 1024 || window.width >= 1024) {
         let i =  document.getElementById("nav-ul").querySelectorAll('li.i');
         i.forEach(e => {
                 e.style.display = 'inline-block';
@@ -42,7 +42,7 @@ function rsz(){
         burger.innerHTML = "&#9776;";
         on = false;
     }else {
-        let i = document.getElementById("nav-ul").querySelectorAll('li.i');
+    let i = document.getElementById("nav-ul").querySelectorAll('li.i');
     i.forEach(e => {
         e.style.display = 'none';
         e.removeEventListener("click",close);
