@@ -63,14 +63,6 @@ nav ul li a{
 .i{
     display: none;
 }
-/* 
-.on{
-    display: flex;
-}
-
-.off{
-    display: none;
-} */
 
 /* HEADER */
 
@@ -201,10 +193,6 @@ header p{
     user-select: none;
 }
 /* SOCIAL MEDIA */
-
-.social{
-
-}
 
 .social-title{
     text-align: center;
@@ -461,7 +449,7 @@ footer p{
         width: auto;
     }
 
-    .on, .off{
+    .i{
         display: inline-block;
     }
 

@@ -30,7 +30,6 @@ function close(){
     });
     burger.innerHTML = "&#9776;";
     on = false;
-  
 }
 
 function rsz(){
@@ -43,7 +42,12 @@ function rsz(){
         burger.innerHTML = "&#9776;";
         on = false;
     }else {
-        on = true;
-        burgerSH()
+        let i = document.getElementById("nav-ul").querySelectorAll('li.i');
+    i.forEach(e => {
+        e.style.display = 'none';
+        e.removeEventListener("click",close);
+    });
+    burger.innerHTML = "&#9776;";
+    on = false;
     }
 }
