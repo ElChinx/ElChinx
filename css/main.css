@@ -60,14 +60,17 @@ nav ul li a{
     color: white;
     width: 100vw;
 }
-
+.i{
+    display: none;
+}
+/* 
 .on{
     display: flex;
 }
 
 .off{
     display: none;
-}
+} */
 
 /* HEADER */
 
@@ -251,7 +254,7 @@ footer p{
 }
 
 /* media querys */
-/* 
+
 @media only screen and (min-width: 480px) {  
 
     .nav-border{
@@ -413,7 +416,7 @@ footer p{
         font-size: 4vw;
     }
 
-} */
+} 
 
 @media only screen and (min-width: 1024px) {  
 
