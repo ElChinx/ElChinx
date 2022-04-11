@@ -60,9 +60,11 @@ nav ul li a{
     color: white;
     width: 100vw;
 }
-.i{
+.off,.i{
     display: none;
 }
+
+
 
 /* HEADER */
 

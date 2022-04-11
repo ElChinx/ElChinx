@@ -36,7 +36,7 @@ function rsz(){
     if (screen.width >= 1024 || window.width >= 1024) {
         let i =  document.getElementById("nav-ul").querySelectorAll('li.i');
         i.forEach(e => {
-                e.style.display = 'inline-block';
+                e.className = "i";
                 e.removeEventListener("click",close);
         })
         burger.innerHTML = "&#9776;";
@@ -45,9 +45,18 @@ function rsz(){
     let i = document.getElementById("nav-ul").querySelectorAll('li.i');
     i.forEach(e => {
         e.style.display = 'none';
+        e.className = "i off";
         e.removeEventListener("click",close);
     });
     burger.innerHTML = "&#9776;";
     on = false;
     }
 }
+
+setInterval(function(){
+    if(document.getElementById("header").style.width < 1024){
+        rsz;
+    }
+},1);
+
+window.addEventListener("resize", rsz);
