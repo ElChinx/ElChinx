@@ -5,12 +5,12 @@ burger.addEventListener("click",burgerSH);
 function burgerSH(){
     let i = document.getElementById("nav-ul").querySelectorAll('li.i');
     i.forEach(e => {
-        if(!on){
-            e.style.display = 'flex';
-            e.addEventListener("click",close)
+        if(on){
+            e.className = "i off";
+            e.removeEventListener("click",close)
         }else{
-            e.style.display = 'none';
-            e.removeEventListener("click",close);
+            e.className = "i";
+            e.addEventListener("click",close);
         }
     });
     if(on){
@@ -25,7 +25,7 @@ function burgerSH(){
 function close(){
     let i =  document.getElementById("nav-ul").querySelectorAll('li.i');
     i.forEach(e => {
-            e.style.display = 'none';
+            e.className = "i off";
             e.removeEventListener("click",close);
     });
     burger.innerHTML = "&#9776;";
@@ -36,7 +36,7 @@ function rsz(){
     if (screen.width >= 1024 || window.width >= 1024) {
         let i =  document.getElementById("nav-ul").querySelectorAll('li.i');
         i.forEach(e => {
-                e.className = "i";
+                e.className = "i off";
                 e.removeEventListener("click",close);
         })
         burger.innerHTML = "&#9776;";
@@ -44,7 +44,6 @@ function rsz(){
     }else {
     let i = document.getElementById("nav-ul").querySelectorAll('li.i');
     i.forEach(e => {
-        e.style.display = 'none';
         e.className = "i off";
         e.removeEventListener("click",close);
     });
@@ -53,10 +52,25 @@ function rsz(){
     }
 }
 
-setInterval(function(){
-    if(document.getElementById("header").style.width < 1024){
-        rsz;
-    }
-},1);
+document.getElementById("l").addEventListener("click",function(){
+    moveF(false,"friends-scroll");
+});
+document.getElementById("r").addEventListener("click",function(){
+    moveF(true,"friends-scroll");
+});
 
-window.addEventListener("resize", rsz);
+document.getElementById("l-w").addEventListener("click",function(){
+    moveF(false,"works-scroll");
+});
+document.getElementById("r-w").addEventListener("click",function(){
+    moveF(true,"works-scroll");
+});
+
+function moveF(d,s){
+    var l = document.getElementById(s);
+    if(d){
+        l.scrollLeft += 612;
+    }else{
+        l.scrollLeft -= 612;
+    }
+}
