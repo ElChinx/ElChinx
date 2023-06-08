@@ -1,0 +1,27 @@
+footer{
+    color: white;
+    background-color: #393939;
+    max-height: max(120px, 10vh);
+    width: min(1024px, 100%);
+    margin: 0 auto;
+    height: 500px;
+    padding: 4rem 0;
+}
+
+footer p{
+    text-align: center;
+    margin: 0 2rem;
+    font-size: 1.3rem;
+    font-family: Arsenal
+}
+
+
+@media only screen and (min-width: 1024px) {  
+
+
+    footer p{
+        font-size: 2rem;
+    }
+    
+
+}

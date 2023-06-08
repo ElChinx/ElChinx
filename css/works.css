@@ -1,0 +1,76 @@
+.works{
+    width: min(1024px, 100%);
+    height: max(330px,100vw);
+    max-height: 330px;
+    margin: 0 auto;
+    background-color: red;
+    text-align: center;
+}
+
+
+section h2{
+    font-size: 1.3rem;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    font-family: Galindo;
+}
+
+.works-c{
+    width: 100%;
+    /* height: max(320px, 100vh); */
+    width: min(1024px, 100%);
+    height: min(300px,80vw);
+}
+
+.works-c div{
+    text-orientation: mixed;
+}
+
+.art,.web{
+    width: 100%;
+    position: absolute;
+    height: max(250px, 60vw);
+    max-height: 250px;
+}
+
+.art{
+    writing-mode:vertical-lr;
+    z-index: 1;
+    width: 50%;
+    background-color: orange;
+}
+
+.web{
+    writing-mode:vertical-rl;
+    z-index: 0;
+    background-color: skyblue;
+    background-image: url("https://i.blogs.es/2fd169/pantallazo/450_1000.jpg");
+
+    /* text-align: end; */
+}
+
+@media only screen and (min-width: 1024px) {  
+
+    .works{
+        height: max(470px,100vw);
+        max-height: 470px;
+    }
+
+    .works section{
+        width: 1024px;
+    }
+
+    .works-c{
+        position: absolute;
+        width: 1024px;
+    }
+
+    .art,.web{
+        max-width: 1024px;
+        position: absolute;
+        height: max(375px, 60vw);
+        max-height: 375px;
+    }
+
+}

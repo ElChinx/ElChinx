@@ -1,0 +1,23 @@
+.comics{
+    width: min(1024px, 100%);
+    height: max(330px,100vw);
+    max-height: 330px;
+    margin: 0 auto;
+}
+
+.comics section h1{
+    text-align:center;
+    font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 1024px) {  
+
+    .comics{
+        height: max(450px,100vw);
+        max-height: 450px;
+    }
+
+    .comics section h2{
+        font-size: 2.5rem;
+    }
+}

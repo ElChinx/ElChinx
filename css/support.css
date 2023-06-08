@@ -1,0 +1,78 @@
+
+.support{
+    background-color: #FFEE1A;
+    max-height: min(320px, 70vh);
+   
+    width: min(1024px, 100%);
+    margin: 0 auto;
+    height: 1000px;
+    padding: 1.5rem 0;
+}
+
+.support section h2{
+    font-size: 2rem;
+}
+
+.support section p{
+    font-size:1.4rem;
+    margin: 0.8rem 2rem;
+    text-align: justify;
+    font-family: Arsenal;
+}
+
+.support section p:last-child{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.shiny {
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    border-radius: 0.5rem;
+}
+
+.shiny:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn 3s ease-in-out infinite;
+}
+
+@-webkit-keyframes shiny-btn {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}
+
+@media only screen and (min-width: 1024px) {  
+
+    .support{
+        max-height: min(400px, 70vh);
+    }
+
+    .support section h2{
+        font-size: 3rem;
+    }
+    
+    .support section p{
+        font-size: 2.5rem;
+    }
+ 
+    .pizza{
+        width: 500px;
+    }
+
+    .btnp{
+        margin-bottom: 2rem;
+    }
+
+}
